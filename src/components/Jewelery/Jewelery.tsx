@@ -5,9 +5,10 @@ import { CiCreditCard2 } from "react-icons/ci";
 import { BiStore } from "react-icons/bi"; 
 import { FaWhatsapp } from "react-icons/fa"; 
 import {motion} from 'framer-motion';
+import { SlideLeft } from '../../utility/animation';
+
 
 export const Jewelery = () => {
-  // estado para almacenar los servicios
   const [service, setService] = useState<IService[]>([]);
 
   useEffect(() => {
@@ -41,7 +42,12 @@ export const Jewelery = () => {
 
           {
       service.map((service) =>(
-        <div key={service._id} className="space-y-4 p-6 bg-[#fbfbfb]
+        <motion.div
+      
+         variants={SlideLeft(service.delay)} 
+        initial='hidden'
+        whileInView='visible'
+        key={service._id} className="space-y-4 p-6 bg-[#fbfbfb]
         hover:bg-white rounded-xl hover:shadow-[0_0_22px_0_rgba(0,0,0,0.15)]">
           
           <div>
@@ -52,13 +58,7 @@ export const Jewelery = () => {
           
           <h2 className="text-xl font-semibold">{service.title}</h2>
           <p className="text-gray-600">{service.description}</p>
-
-          {/* ACA FALTA EL LINK  */}
-          {/* <a href={service.link} target="_blank" rel="noopener noreferrer">
-              Más información
-            </a> */}
-            {/* <p>Tiempo estimado: {service.delay} min</p> */}
-        </div>
+        </motion.div>
       ))}
         </div>
       </div>

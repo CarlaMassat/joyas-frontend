@@ -1,6 +1,7 @@
 import { FaPlay } from "react-icons/fa";
 import HeroImg from '../../assets/hero.jpeg'
-
+import {motion} from 'framer-motion';
+import { SlideRight } from "../../utility/animation";
 
 export const Hero = () => {
   return (
@@ -15,20 +16,32 @@ export const Hero = () => {
           <div className="text-center md:text-left
           space-y-6">
 
-          <h1 className="text-4xl lg:text-5xl font-bold
+          <motion.h1 
+          variants={SlideRight(0.6)}
+          initial='hidden'
+          animate='visible'
+          className="text-4xl lg:text-5xl font-bold
           leading-relaxed xl:leading-normal">
             Regalate amor a ti misma, una joya que {" "}
             <span className="text-indigo-600 font-semibold">siempre brillará</span>
             {" "}
-          </h1>
+          </motion.h1>
 
-          <p className="text-gray-600 xl:max-w-[500px]">
+          <motion.p  
+          variants={SlideRight(1.2)}
+          initial='hidden'
+          animate='visible'
+          className="text-gray-600 xl:max-w-[500px]">
           Cada joya es un reflejo de la confianza y el estilo de quien la luce.
-          </p>
+          </motion.p>
 
           {/* button section */}
 
-          <div className="flex justify-center 
+          <motion.div
+           variants={SlideRight(1.5)}
+           initial='hidden'
+           animate='visible' 
+          className="flex justify-center 
           items-center gap-8 md:justify-start !mt-4">
             <button className="primary-btn flex
             items-center gap-2">
@@ -41,7 +54,7 @@ export const Hero = () => {
             
             <FaPlay/> Ver Ahora
             </button>
-          </div>
+          </motion.div>
 
           </div>
           
