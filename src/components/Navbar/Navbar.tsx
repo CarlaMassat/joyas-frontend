@@ -35,7 +35,10 @@ export const Navbar = () => {
         <div className="container flex justify-between items-center py-8">
           {/* Logo */}
           <div className="text-2xl flex items-center gap-2 font-bold">
-            <img src={logo} alt="Logo" width="120" />
+            <NavLink to='/'>
+            <img src={logo} alt="Logo" width="120" className="cursor-pointer"/>
+            </NavLink>
+            
           </div>
 
          

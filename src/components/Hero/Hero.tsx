@@ -62,12 +62,16 @@ export const Hero = () => {
 
         {/* Hero Image */}
 
-        <div className="flex justify-center
+        <motion.div 
+         variants={SlideRight(0.6)}
+          initial='hidden'
+          animate='visible'
+        className="flex justify-center
         items-center">
         <img src={HeroImg} alt="Logo" 
         className="w-[350px] md:w-[550px] xl:w-
         [700px] drop-shadow" />
-        </div>
+        </motion.div>
       </div>
     </section>
   );
