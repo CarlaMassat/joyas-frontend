@@ -5,3 +5,11 @@ export interface IService {
     description: string,
     delay: number
 }
+
+export interface IBanner {
+    _id: string,
+    title: string,
+    image:string,
+    subtitle: string,
+    link: string
+}
