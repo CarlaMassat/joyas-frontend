@@ -1,6 +1,12 @@
+
 import { useEffect, useState } from "react";
 import { ICategory } from "../../types/types";
 import { getCategories } from "../../api/ProjectAPI";
+import AceroBlanco from "../../assets/Acero blanco/acero blanco-1.jpeg";
+import AceroDorado1 from "../../assets/Acero dorado/Acero dorado-1.jpeg";
+import EnchapadoOro1 from "../../assets/Enchapado oro/enchapado oro-1.jpeg";
+import Plata1 from "../../assets/Plata/plata-1.jpeg";
+import PlataDorada1 from "../../assets/Plata dorada/plata dorada-1.jpeg";
 import { motion } from "framer-motion";
 
 export const TabComp = () => {
@@ -21,9 +27,18 @@ export const TabComp = () => {
     getCategoryData();
   }, []);
 
+
+  const imageMap: Record<string, string[]> = {
+    "Acero blanco": [AceroBlanco,],
+    "Acero dorado": [AceroDorado1],
+    "Enchapado oro": [EnchapadoOro1],
+    Plata: [Plata1,],
+    "Plata dorada": [PlataDorada1],
+  };
+
   return (
     <div className="container my-12 md:my-16">
-          {/* Tabs button section */}
+      {/* Tabs button section */}
       <div className="flex space-x-4 mb-4 p-6">
         <button
           onClick={() => setActiveTab("Todos")}
@@ -51,13 +66,30 @@ export const TabComp = () => {
         ))}
       </div>
 
-      {/* <div className="category-list">
-                {filteredCategories.map((category) => (
-                    <div key={category._id}>
-                        <h3>{category.name}</h3> 
-                    </div>
-                ))}
-            </div> */}
+      {/* Tabs Card section */}
+
+      <div className="grid grid-cols-1 md:grid-cols-2
+      lg:grid-cols-3 gap-6" >
+        {filteredCategories.map((category) => (
+          <motion.div 
+          id= {category._id}
+          key={category._id}
+          initial={{opacity: 0, x: 10}}
+          whileInView={{opacity: 1, x: 0}}
+          className="p-4 border rounded shadow-sm
+          space-y-2" >
+            {(imageMap[category.name] || []).map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt={`${category.name} - ${index + 1}`}
+                className="h-[240px] w-full object-cover"
+              />
+            ))}
+            <p className="text-xl font-semibold text-slate-900">{category.name}</p>
+          </motion.div>
+        ))}
+      </div>
     </div>
   );
 };
