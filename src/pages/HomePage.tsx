@@ -7,6 +7,7 @@ import Img2 from "../assets/3.jpeg";
 import { IBanner } from "../types/types";
 import { useEffect, useState } from "react";
 import { getBanners } from "../api/ProjectAPI";
+import { TabComp } from "../components/Tab/TabComp";
 
 
 export const HomePage = () => {
@@ -49,6 +50,8 @@ export const HomePage = () => {
             link={banner.link}
           />
         ))}
+
+        <TabComp/>
       </div>
     </>
   );

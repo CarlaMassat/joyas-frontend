@@ -13,3 +13,8 @@ export interface IBanner {
     subtitle: string,
     link: string
 }
+
+export interface ICategory {
+    _id: string,
+    name:string
+}

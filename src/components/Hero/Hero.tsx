@@ -70,7 +70,7 @@ export const Hero = () => {
         items-center">
         <img src={HeroImg} alt="Logo" 
         className="w-[350px] md:w-[550px] xl:w-
-        [700px] drop-shadow" />
+        [700px] drop-shadow rounded-lg" />
         </motion.div>
       </div>
     </section>
