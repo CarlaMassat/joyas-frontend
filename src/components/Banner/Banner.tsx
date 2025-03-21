@@ -11,7 +11,7 @@ export const Banner = ({ _id, image, title, subtitle, link }: IBanner) => {
       >
         {/* Banner Image section */}
 
-        <div>
+        <div className="flex justify-center items-center">
           <motion.img
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
