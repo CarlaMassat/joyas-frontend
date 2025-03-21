@@ -39,7 +39,7 @@ export const TabComp = () => {
   return (
     <div className="container my-12 md:my-16">
       {/* Tabs button section */}
-      <div className="flex space-x-4 mb-4 p-6">
+      <div className="flex flex-wrap space-x-2 mb-4 p-6">
         <button
           onClick={() => setActiveTab("Todos")}
           className={`py-2 px-4 rounded ${
@@ -55,7 +55,7 @@ export const TabComp = () => {
           <button
             key={category._id}
             onClick={() => setActiveTab(category.name)}
-            className={`py-2 px-4 rounded ${
+            className={`py-2 px-3 mx-1 my-1 rounded text-sm ${
               activeTab === category.name
                 ? "bg-violet-600 text-white"
                 : "bg-gray-200 text-gray-700"
