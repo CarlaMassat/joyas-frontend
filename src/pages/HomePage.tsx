@@ -8,6 +8,7 @@ import { IBanner } from "../types/types";
 import { useEffect, useState } from "react";
 import { getBanners } from "../api/ProjectAPI";
 import { TabComp } from "../components/Tab/TabComp";
+import { Testimonials } from "../components/Testimonials/Testimonials";
 
 
 export const HomePage = () => {
@@ -52,6 +53,7 @@ export const HomePage = () => {
         ))}
 
         <TabComp/>
+        <Testimonials/>
       </div>
     </>
   );
