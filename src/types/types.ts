@@ -18,3 +18,10 @@ export interface ICategory {
     _id: string,
     name:string
 }
+
+export interface IReview {
+    _id: string,
+    title: string,
+    description: string,
+    delay: number
+}

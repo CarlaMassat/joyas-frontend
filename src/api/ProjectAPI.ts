@@ -1,5 +1,5 @@
 import api from "../lib/axios";
-import { IBanner, ICategory, IService } from "../types/types";
+import { IBanner, ICategory, IReview, IService } from "../types/types";
 
 export async function getServices(): Promise<IService[]> {
   try {
@@ -26,6 +26,19 @@ export async function getCategories(): Promise<ICategory[]> {
 
   try {
     const response = await api.get("/categories");
+    // console.log(response.data)
+    return response.data;
+
+  } catch (error) {
+    console.log(error);
+    return [];
+  }
+}
+
+export async function getReviews(): Promise<IReview[]> {
+
+  try {
+    const response = await api.get("/reviews");
     // console.log(response.data)
     return response.data;
 
