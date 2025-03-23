@@ -91,7 +91,7 @@ const setting = {
             review.map((data) => (
               <div key={data._id} className='my-6'>
                 <div className='flex flex-col gap-4 p-8
-                shadow-lg mx-4 rounded-xl  bg-stone-100'>
+                shadow-lg mx-4 rounded-xl  bg-stone-100 min-h-[350px] justify-between'>
                   {/* upper section*/}
                 <div className='flex justify-start
                 items-center gap-5'>
@@ -100,10 +100,10 @@ const setting = {
                 </div>
                 </div>    
               {/* bottom section*/}
-                <div className='py-6 space-y-4 '>
-                  <p className='text-sm text-gray-500'>
+                <div className='py-6 space-y-4 flex-grow '>
+                  <p className='text-sm text-gray-500 flex-grow'>
                     {data.description}</p>
-                  <p>⭐⭐⭐⭐⭐</p>
+                  <p className='pt-4'>⭐⭐⭐⭐⭐</p>
                   </div>     
                 </div>
               </div>
