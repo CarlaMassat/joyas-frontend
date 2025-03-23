@@ -100,10 +100,10 @@ const setting = {
                 </div>
                 </div>    
               {/* bottom section*/}
-                <div className='py-6 space-y-4 flex-grow '>
+                <div className='py-6 space-y-4 flex flex-col justify-end '>
                   <p className='text-sm text-gray-500 flex-grow'>
                     {data.description}</p>
-                  <p className='pt-4'>⭐⭐⭐⭐⭐</p>
+                  <p className='pt-4 '>⭐⭐⭐⭐⭐</p>
                   </div>     
                 </div>
               </div>
