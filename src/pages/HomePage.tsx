@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import { getBanners } from "../api/ProjectAPI";
 import { TabComp } from "../components/Tab/TabComp";
 import { Testimonials } from "../components/Testimonials/Testimonials";
+import { BannerDiscount } from "../components/Banner/BannerDiscount";
 
 
 export const HomePage = () => {
@@ -54,6 +55,7 @@ export const HomePage = () => {
 
         <TabComp/>
         <Testimonials/>
+        <BannerDiscount/>
       </div>
     </>
   );
