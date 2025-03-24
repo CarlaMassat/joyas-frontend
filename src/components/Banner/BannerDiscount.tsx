@@ -20,8 +20,7 @@ export const BannerDiscount = () => {
             viewport={{ once: true }}
             className="text-3xl lg:text-5xl font-bold"
           >
-            Obtén un 15% de descuento en tu primer pedido, ¿Estás listo para
-            comprar?
+            Obtén un 15% OFF en tu primera compra desde $34.999
           </motion.h1>
           <motion.p
             variants={SlideLeft(0.7)}
