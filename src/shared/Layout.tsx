@@ -1,23 +1,19 @@
 import { Outlet } from "react-router-dom";
 import { Navbar } from "../components/Navbar/Navbar";
+import { Footer } from "../components/Footer/Footer";
 
 
 
 export const Layout = () => {
-  return (
-    // Aca va el Header
-     // Aca va el Navbar- Listo
-      // Aca va el Footer- 
-     
+  return ( 
     <>
     <Navbar/>
-
     <main className="container mx-auto py-16">
       <Outlet />
       </main>
+      <Footer/>
     </>
 
-    // Aca va el  <Outlet />
   )
 }
 

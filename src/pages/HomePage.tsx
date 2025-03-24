@@ -12,6 +12,7 @@ import { Testimonials } from "../components/Testimonials/Testimonials";
 import { BannerDiscount } from "../components/Banner/BannerDiscount";
 
 
+
 export const HomePage = () => {
   const [banner, setBanner] = useState<IBanner[]>([]);
   const images = [Img1, Img2];
