@@ -94,8 +94,8 @@ const setting = {
 
       {/* Testimonios Cards */}
       <div>
+      {review.length > 0 ? (
        <Slider {...setting}>
-
         {
             review.map((data) => (
               <div key={data._id} className='my-6'>
@@ -118,6 +118,9 @@ const setting = {
               </div>
             ))}
        </Slider>
+      ) : (
+        <p>Cargando reseñas...</p>
+      )}
       </div>
       </div>
     </div>
