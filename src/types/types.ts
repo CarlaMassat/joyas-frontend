@@ -14,6 +14,11 @@ export interface IBanner {
     link: string
 }
 
+export interface IResponsiveMenu {
+    open: boolean,
+    setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
 export interface ICategory {
     _id: string,
     name:string
