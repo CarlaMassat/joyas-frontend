@@ -1,8 +1,10 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import { FaWindowClose } from "react-icons/fa";
+import { IResponsiveMenu } from '../../types/types';
 
-export const ResponsiveMenu = ({ open, setOpen }) => {
+
+export const ResponsiveMenu = ({ open, setOpen }: IResponsiveMenu) => {
   return (
     <AnimatePresence mode="wait">
       {open && (
@@ -14,7 +16,6 @@ export const ResponsiveMenu = ({ open, setOpen }) => {
           className="absolute top-20 left-0 w-full h-screen z-20"
         >
           <div className="text-xl font-semibold bg-violet-300 text-white py-10 m-6 rounded-3xl flex flex-col justify-center items-center gap-10 relative">
-            {/* Botón para cerrar el menú */}
             <button
               className="absolute top-4 right-6 text-4xl"
               onClick={() => setOpen(false)}
