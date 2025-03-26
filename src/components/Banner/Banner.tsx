@@ -2,15 +2,13 @@ import { IBanner } from "../../types/types";
 import { motion } from "framer-motion";
 import { SlideUp } from "../../utility/animation";
 
-export const Banner = ({ _id, image, title, subtitle, link }: IBanner) => {
+export const Banner = ({ image, title, subtitle }: IBanner) => {
   return (
     <div className="container">
       <div
         className="bg-[#f9f9f9] grid grid-cols-1 md:grid-cols-2
         space-y-6 md:space-y-0 py-14 rounded-lg"
       >
-        {/* Banner Image section */}
-
         <div className="flex justify-center items-center">
           <motion.img
             initial={{ opacity: 0, scale: 0.5 }}
@@ -21,10 +19,8 @@ export const Banner = ({ _id, image, title, subtitle, link }: IBanner) => {
             className="w-[300px] md:max-w-[400px]
                 xl:min-w-[450px] h-full object-cover
                 rounded-lg"
-            
           />
         </div>
-        {/* Banner Text section */}
 
         <div
           className="flex flex-col justify-center
