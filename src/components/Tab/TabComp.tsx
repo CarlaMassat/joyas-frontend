@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { ICategory } from "../../types/types";
 import { getCategories } from "../../api/ProjectAPI";
 import AceroBlanco from "../../assets/Acero blanco/acero blanco-1.jpeg";
-import AceroDorado1 from "../../assets/Acero dorado/Acero dorado-1.jpeg";
+import AceroDorado1 from "../../assets/Acero dorado/acero dorado-1.jpeg";
 import EnchapadoOro1 from "../../assets/Enchapado oro/enchapado oro-1.jpeg";
 import Plata1 from "../../assets/Plata/plata-1.jpeg";
 import PlataDorada1 from "../../assets/Plata dorada/plata dorada-1.jpeg";
