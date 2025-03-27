@@ -55,10 +55,15 @@ export const Testimonials = () => {
     const fetchReviews = async () => {
       try {
         const fetchedReviews = await getReviews();
-
-        const uniqueReviews = Array.from(
-          new Map(fetchedReviews.map((rev) => [rev._id, rev])).values()
-        );
+       
+        let uniqueId: string[] = [];
+        const uniqueReviews = fetchedReviews.filter((review) =>{
+          if (!uniqueId.includes(review._id)) {
+            uniqueId = [...uniqueId, review._id]
+            return true;
+          }
+            return false;
+        })
 
         setReview(uniqueReviews);
       } catch (error) {
@@ -81,7 +86,7 @@ export const Testimonials = () => {
           </h1>
         </div>
         <div>
-          {review.length > 0 ? (
+
             <Slider {...setting}>
               {review.map((data) => (
                 <div key={data._id} className="my-6">
@@ -109,9 +114,7 @@ export const Testimonials = () => {
                 </div>
               ))}
             </Slider>
-          ) : (
-            <p>Cargando reseñas...</p>
-          )}
+         
         </div>
       </div>
     </div>
